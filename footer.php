@@ -26,7 +26,7 @@
 			<?php wp_nav_menu(array('theme_location' => 'footer-bottom-right-links')); ?>
 		</ul>
 
-		<form class="search" action="/"><input type="text" name="s" placeholder="⌕" title="Search" value="<?=htmlentities($_GET['s']);?>"></form>
+		<form class="search" action="/"><input type="text" name="s" title="Search" value="<?=htmlentities($_GET['s']);?>"></form>
 
 	</footer>
 
