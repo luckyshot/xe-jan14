@@ -26,11 +26,11 @@
 			<?php wp_nav_menu(array('theme_location' => 'footer-bottom-right-links')); ?>
 		</ul>
 
-		<form class="search" action="/"><input type="text" name="s" title="Search" value="<?=htmlentities($_GET['s']);?>"></form>
+		<form class="search" action="<?php bloginfo('url'); ?>"><input type="text" id="s" name="s" title="Search" value="<?=htmlentities($_GET['s']);?>"></form>
 
 	</footer>
 
-	<script>setTimeout(function(){document.body.className = document.body.className.replace("loading","")},1e3)</script>
+	<script>setTimeout(function(){document.body.className = document.body.className.replace("loading","")},1e3);document.getElementById('s').addEventListener("focus",function(){document.getElementById('cas').className=''})</script>
 
 	<?php wp_footer(); ?>
 

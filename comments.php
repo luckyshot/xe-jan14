@@ -73,7 +73,7 @@ YP       `Y88P'  88   YD YP  YP  YP
 		<?php else : ?>
 			<p style="margin-bottom:0"><textarea name="comment" cols="50" rows="2" placeholder="Comment&hellip;"></textarea></p>
 			
-			<div class="hide">
+			<div id="cas" class="hide">
 				<?php if ( $user_ID ) : ?>
 					<p>Commenting as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a> <small><a href="<?php echo wp_logout_url(); ?>" title="Logout">Logout</a></small></p>
 				<?php else : ?>
