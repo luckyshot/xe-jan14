@@ -29,7 +29,6 @@ $oddcomment = ' alt'; ?>
 				<?php if ($comment->user_id > 0) {$oddcomment = ' auth';} ?>
 				<li id="comment-<?php comment_ID(); ?>" class="<?php echo $oddcomment; ?>">
 					<div class="s8">
-						<?php /*<img src="<?php gravatar('R', 45, get_bloginfo('template_url').'/static/user-avatar.png'); ?>" alt="Avatar" />*/ ?>
 						<p><?php comment_author(); ?> says:</span>
 					</div>
 					<div class="s4">
