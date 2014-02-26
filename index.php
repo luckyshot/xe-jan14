@@ -1,5 +1,5 @@
 <?php get_header();
-$idObj = get_category_by_slug(HOME_HORIZONTAL_CATEGORY_SLUG); 
+$idObj = get_category_by_slug(JAN14_FEATURED_CATEGORY); 
 ?>
 
 

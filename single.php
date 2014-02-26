@@ -47,7 +47,7 @@
 			<p class="grey center">Please share the article</p>
 			
 			<div class="stuck center">
-				<a href="https://twitter.com/share" class="twitter-share-button" data-via="<?php echo TWITTER_ACCOUNT; ?>" data-related="xaviesteve" data-count="vertical" data-url="<?php the_permalink(); ?>">Tweet</a>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="<?php echo JAN14_TWITTER_ACCOUNT; ?>" data-related="xaviesteve" data-count="vertical" data-url="<?php the_permalink(); ?>">Tweet</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
 				&nbsp;&nbsp;&nbsp;&nbsp;

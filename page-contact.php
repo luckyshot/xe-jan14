@@ -10,8 +10,8 @@ get_header(); ?>
 			<?php the_content(); ?>
 		</div>
 
-		<p class="announcement"><?php echo CONTACT_EMAIL_ADDRESS; ?><br>
-			<small><a href="https://twitter.com/<?php echo TWITTER_ACCOUNT; ?>" title="Twitter" rel="nofollow">@<?php echo TWITTER_ACCOUNT; ?></a></small>
+		<p class="announcement"><?php echo JAN14_CONTACT_EMAIL_ADDRESS; ?><br>
+			<small><a href="https://twitter.com/<?php echo JAN14_TWITTER_ACCOUNT; ?>" title="Twitter" rel="nofollow">@<?php echo JAN14_TWITTER_ACCOUNT; ?></a></small>
 		</p>
 
 	</section>

@@ -12,16 +12,16 @@ Y8b  d8 `8b  d8' 88  V888 88        .88.   88. ~8~
 
 // What post categories should be displayed as the horizontal list in the homepage, before the Latest Articles
 // Type in the category slug (what you see in the URL)
-define('HOME_HORIZONTAL_CATEGORY_SLUG', 'projects');
+define('JAN14_FEATURED_CATEGORY', 'projects');
 
-// The porfolio page shows another website inside of it (iframe), it can be anything you want really
-// You can even have your twitter profile or a Google Map
-define('PORTFOLIO_PAGE', 'http://www.behance.net/xaviesteve');
+// The external page shows another website inside of it (iframe), it can be anything you want, 
+// I use it to show my Behance portfolio, you can even have your twitter profile or a Google Map
+define('JAN14_EXTERNAL_PAGE', 'http://www.behance.net/xaviesteve');
 
 // Shows in the contact page
-define('CONTACT_EMAIL_ADDRESS', '');
+define('JAN14_CONTACT_EMAIL_ADDRESS', '');
 
-define('TWITTER_ACCOUNT', 'xaviesteve');
+define('JAN14_TWITTER_ACCOUNT', 'xaviesteve');
 
 // This is the image thumbnail quality, recommended between 80 and 90
 define('TIMTHUMB_QUALITY', 85);
