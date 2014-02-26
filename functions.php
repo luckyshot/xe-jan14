@@ -12,7 +12,7 @@ Y8b  d8 `8b  d8' 88  V888 88        .88.   88. ~8~
 
 // What post categories should be displayed as the horizontal list in the homepage, before the Latest Articles
 // Type in the category slug (what you see in the URL)
-define('JAN14_FEATURED_CATEGORY', 'projects');
+define('JAN14_FEATURED_CATEGORY', 'alignment');
 
 // The external page shows another website inside of it (iframe), it can be anything you want, 
 // I use it to show my Behance portfolio, you can even have your twitter profile or a Google Map
@@ -32,6 +32,17 @@ define('TIMTHUMB_QUALITY', 85);
 // ------------------ STOP EDITING ------------------
 
 
+function register_my_menus() {
+	register_nav_menus(
+		array(
+			'header-main' => __( 'Header Menu' ),
+			'footer-column-title-links' => __( 'Footer Title links' ),
+			'footer-column-links' => __( 'Footer links' ),
+			'footer-bottom-right-links' => __( 'Footer bottom right' )
+		)
+	);
+}
+add_action( 'init', 'register_my_menus' );
 
 
 // Get URL of first image in a post
