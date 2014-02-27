@@ -1,13 +1,14 @@
 
-<h1>January 2014 Wordpress Theme</h1>
+<h1>January 14 Wordpress Theme</h1>
 
-<p><img src="http://xaviesteve.com/wp-content/themes/jan14/screenshot.png" alt=""></p>
+<p><img src="http://xaviesteve.com/wp-content/uploads/2014/02/xaviesteve-jan14-screenshots.jpg" alt="January 14"></p>
 
-<p>January 2014 is a flat, one column, minimal and modern Wordpress theme originally made for XaviEsteve.com. The theme focuses on great design, usability, readability, speed and concise code.</p>
+<p>January 14 is a flat, one column, minimal and modern Wordpress theme originally made for XaviEsteve.com. The theme focuses on great design, usability, readability, speed and concise code.</p>
 
-<p>Don't use yet, I haven't tested anything and still need to fix the navigation menus, fix a few critical bugs and publish the documentation.</p>
+<p><b><a class="button" href="https://github.com/luckyshot/xe-jan14/archive/master.zip">Download January 14</a></b></p>
 
-<p>Docs here soon: http://xaviesteve.com/4575/</p>
+<p><b>Demo</b>: <a href="http://xaviesteve.com/">http://xaviesteve.com</a></small></p>
 
+<p><b>Documentation</b>: <a href="http://xaviesteve.com/4575/">http://xaviesteve.com/4575/</a></small></p>
 
-<p>Demo at <a href="http://xaviesteve.com/">xaviesteve.com</a></p>
+<p><b>License</b>: &copy; 2014 Xavi Esteve - Creative Commons Attributive</p>
