@@ -21,7 +21,7 @@ $idObj = get_category_by_slug(JAN14_FEATURED_CATEGORY);
 		while ($projects->have_posts()) : $projects->the_post();
 ?>
 			<li><a href="<?php the_permalink(); ?>">
-					<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo catch_that_image() ?>&amp;w=155&amp;zc=1&amp;q=<?=TIMTHUMB_QUALITY?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" height="155" width="155">
+					<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo jan14_catch_that_image() ?>&amp;w=155&amp;zc=1&amp;q=<?=JAN14_TIMTHUMB_QUALITY?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" height="155" width="155">
 					<h3 class="title"><?php the_title(); ?></h3>
 					<p class="subtitle"><?php
 						$yoast_meta = get_post_meta($post->ID, '_yoast_wpseo_metadesc', true);
@@ -48,7 +48,7 @@ $idObj = get_category_by_slug(JAN14_FEATURED_CATEGORY);
 		while ($blogposts->have_posts()) : $blogposts->the_post();
 ?>
 			<li><a href="<?php the_permalink(); ?>">
-					<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo catch_that_image() ?>&amp;w=155&amp;h=155&amp;zc=1&amp;q=<?=TIMTHUMB_QUALITY?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" height="155" width="155">
+					<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo jan14_catch_that_image() ?>&amp;w=155&amp;h=155&amp;zc=1&amp;q=<?=JAN14_TIMTHUMB_QUALITY?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" height="155" width="155">
 					<h3 class="title"><?php the_title(); ?></h3>
 					<p class="subtitle"><?php the_date(); ?><?php comments_number('', ' <span class="bubble" title="Comment">1</span>', ' <span class="bubble" title="Comments">%</span>'); ?></p>
 				</a>

@@ -1,7 +1,7 @@
 
 <?php if (is_single()) { ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<footer style="background-image:url('<?php echo catch_that_image(); ?>')">
+		<footer style="background-image:url('<?php echo jan14_catch_that_image(); ?>')">
 	<?php endwhile; endif; ?>
 <?php }else{ ?>
 	<footer>

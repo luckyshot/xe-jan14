@@ -22,8 +22,8 @@ if (strpos(get_bloginfo('url'), 'localhost') !== false) {
 <?php if (is_single()) { ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<style>
-			body {background-image:url('<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo catch_that_image() ?>&w=960&h=460&zc=1&q=<?=TIMTHUMB_QUALITY?>');}
-			@media screen and (min-width: 960px) {body {background-image: url('<?php echo catch_that_image(); ?>');}}
+			body {background-image:url('<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo jan14_catch_that_image() ?>&w=960&h=460&zc=1&q=<?=JAN14_TIMTHUMB_QUALITY?>');}
+			@media screen and (min-width: 960px) {body {background-image: url('<?php echo jan14_catch_that_image(); ?>');}}
 		</style>
 	<?php endwhile; endif; ?>
 <?php } ?>

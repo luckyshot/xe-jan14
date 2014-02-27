@@ -13,7 +13,7 @@ $idObj = get_category_by_slug(JAN14_FEATURED_CATEGORY);
 			?>
 
 			<li><a href="<?php the_permalink(); ?>">
-					<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo catch_that_image() ?>&amp;w=155&amp;h=155&amp;zc=1&amp;q=<?=TIMTHUMB_QUALITY?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+					<img src="<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo jan14_catch_that_image() ?>&amp;w=155&amp;h=155&amp;zc=1&amp;q=<?=JAN14_TIMTHUMB_QUALITY?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
 					<h3 class="title"><?php the_title(); ?></h3>
 					<p class="subtitle"><?php the_date(); ?><?php comments_number('', ' <span class="bubble" title="Comment">1</span>', ' <span class="bubble" title="Comments">%</span>'); ?></p>
 				</a>

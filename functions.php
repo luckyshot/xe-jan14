@@ -24,7 +24,7 @@ define('JAN14_CONTACT_EMAIL_ADDRESS', '');
 define('JAN14_TWITTER_ACCOUNT', 'xaviesteve');
 
 // This is the image thumbnail quality, recommended between 80 and 90
-define('TIMTHUMB_QUALITY', 85);
+define('JAN14_TIMTHUMB_QUALITY', 85);
 
 
 
@@ -32,7 +32,7 @@ define('TIMTHUMB_QUALITY', 85);
 // ------------------ STOP EDITING ------------------
 
 
-function register_my_menus() {
+function jan14_register_my_menus() {
 	register_nav_menus(
 		array(
 			'header-main' => __( 'Header Menu' ),
@@ -42,11 +42,11 @@ function register_my_menus() {
 		)
 	);
 }
-add_action( 'init', 'register_my_menus' );
+add_action( 'init', 'jan14_register_my_menus' );
 
 
 // Get URL of first image in a post
-function catch_that_image() {
+function jan14_catch_that_image() {
 	global $post, $posts;
 	$first_img = '';
 	ob_start();
