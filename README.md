@@ -17,7 +17,7 @@
 
 <h3>Screenshots</h3>
 
-<h5>Each post has its own header</h5>
+<h5>Each blog post gets its own header image automatically</h5>
 <p><img src="http://xaviesteve.com/wp-content/uploads/2014/02/january-14-posts.jpg" alt="January 14"></p>
 
 <h5>Social buttons included by default</h5>
