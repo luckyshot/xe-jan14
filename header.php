@@ -45,16 +45,38 @@ if (strpos(get_bloginfo('url'), 'localhost') !== false) {
 
 
 <?php if (is_front_page()) { ?>
-
 	<h1><?php bloginfo('name'); ?> 
 	<small><?php bloginfo('description'); ?></small></h1>
 
 <?php }else if (is_404()) { ?>
-
 	<h1>Not found</h1>
 
-<?php }else if (is_search()) { ?>
+<?php }elseif (is_category()) { ?>
+	<h1><?php single_cat_title(); ?>
+		<small>Category archive</small></h1>
 
+<?php }elseif (is_tag()) { ?>
+	<h1><?php single_tag_title(); ?>
+		<small>Tag archive</small></h1>
+
+<?php }elseif (is_day()) { ?>
+	<h1><?php the_time('F jS, Y'); ?>
+		<small>Daily archive</small></h1>
+
+<?php }elseif (is_month()) { ?>
+	<h1><?php the_time('F, Y'); ?>
+		<small>Monthly archive</small></h1>
+
+<?php }elseif (is_year()) { ?>
+	<h1><?php the_time('Y'); ?>
+		<small>Yearly archive</small></h1>
+
+<?php }elseif (is_author()) { 
+	$author = get_userdata( get_query_var('author') ); ?>
+	<h1><?php echo $author->display_name; ?>
+		<small>Author archive</small></h1>
+
+<?php }else if (is_search()) { ?>
 	<h1>Searching <i><?=htmlentities($_REQUEST['s']);?></i></h1>
 
 <?php }else{ ?>
