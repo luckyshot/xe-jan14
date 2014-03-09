@@ -83,7 +83,9 @@ YP       `Y88P'  88   YD YP  YP  YP
 					<p class="s6" style="margin-bottom:0">
 						<input id="comment-email" name="email" value="<?php echo $comment_author_email; ?>" type="text" placeholder="Email" title="Email" />
 					</p>
-			<?php endif; ?>								
+			<?php endif; ?>
+
+			<?php do_action('comment_form', $post->ID); ?>
 
 			<p class="tr"><input name="submit" type="submit" id="submit" tabindex="5" class="button blue" value="Send Comment" />
 
