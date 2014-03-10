@@ -54,7 +54,19 @@
 				<div class="g-plusone" data-size="tall" data-href="<?php the_permalink(); ?>"></div>
 			</div>
 			
-			<p class="grey center"><small><?php the_author(); ?> wrote this article on <?php the_time(get_option('date_format')); ?>.</small></p>
+			<p class="grey center"><small><?php the_author(); ?> wrote this article on <?php the_time(get_option('date_format')); ?> and published it in <?php 
+					$categories = get_the_category();
+					$separator = ', ';
+					$output = '';
+					if ($categories) {
+						foreach($categories as $category) {
+							if (!in_array($category->cat_name, $ignorecats)) {
+								$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all articles in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+							}
+						}
+						echo trim($output, $separator);
+					}
+				?>.</small></p>
 		</section>
 
 		<div class="post">
