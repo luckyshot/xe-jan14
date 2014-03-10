@@ -53,7 +53,7 @@ if (strpos(get_bloginfo('url'), 'localhost') !== false) {
 
 <?php }elseif (is_category()) { ?>
 	<h1><?php single_cat_title(); ?>
-		<small>Category archive</small></h1>
+		<small><?php if (category_description()) {echo category_description();}else{echo 'Category archive';}?></small></h1>
 
 <?php }elseif (is_tag()) { ?>
 	<h1><?php single_tag_title(); ?>
