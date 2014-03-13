@@ -31,6 +31,9 @@ define('JAN14_TIMTHUMB_QUALITY', 85);
 
 // ------------------ STOP EDITING ------------------
 
+if ( ! isset( $content_width ) )
+	$content_width = 600;
+
 
 function jan14_register_my_menus() {
 	register_nav_menus(
