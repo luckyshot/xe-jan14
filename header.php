@@ -19,14 +19,12 @@ if (strpos(get_bloginfo('url'), 'localhost') !== false) {
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1"/>
 	<?php wp_head(); ?>
 
-<?php if (is_single()) { ?>
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); if (catch_that_image()) : ?>
 		<style>
-			body {background-image:url('<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo jan14_catch_that_image() ?>&w=960&h=460&zc=1&q=<?=JAN14_TIMTHUMB_QUALITY?>');}
-			@media screen and (min-width: 960px) {body {background-image: url('<?php echo jan14_catch_that_image(); ?>');}}
+			body {background-image:url('<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo catch_that_image() ?>&w=960&zc=1&q=<?=TIMTHUMB_QUALITY?>');}
+			@media screen and (min-width: 960px) {body {background-image: url('<?php echo catch_that_image(); ?>');}}
 		</style>
-	<?php endwhile; endif; ?>
-<?php } ?>
+	<?php endif; endwhile; endif; ?>
 
 </head>
 
