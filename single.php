@@ -55,18 +55,33 @@
 			</div>
 			
 			<p class="grey center"><small><?php the_author(); ?> wrote this article on <?php the_time(get_option('date_format')); ?> and published it in <?php 
-					$categories = get_the_category();
-					$separator = ', ';
-					$output = '';
-					if ($categories) {
-						foreach($categories as $category) {
-							if (!in_array($category->cat_name, $ignorecats)) {
-								$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all articles in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
-							}
-						}
-						echo trim($output, $separator);
-					}
-				?>.</small></p>
+				$categories = get_the_category();
+				$categoryids = '';
+				foreach ($categories as $category) {
+					$categoryids .= $category->term_id.',';
+				}
+
+				$args = array(
+					'orderby'            => 'count',
+					'order'              => 'DESC',
+					'style'              => 'none',
+					'use_desc_for_title' => 1,
+					'echo'               => 0,
+					'include'            => $categoryids,
+					'title_li'           => '',
+					'number'             => 8,
+					//'depth'              => 2,
+					'current_category'   => 0,
+					'pad_counts'         => 0
+				);
+
+				$categories = wp_list_categories( $args );
+				$categories = explode('<br />', $categories);
+
+				$last = array_pop($categories);
+				$last = array_pop($categories); // needs to be done twice, last item in array is blank
+				echo strtolower(implode(', ', $categories)." and ".$last);
+			?>.</small></p>
 		</section>
 
 		<div class="post">
