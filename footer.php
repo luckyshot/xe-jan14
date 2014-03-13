@@ -1,11 +1,6 @@
 
-<?php if (is_single()) { ?>
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<footer style="background-image:url('<?php echo jan14_catch_that_image(); ?>')">
-	<?php endwhile; endif; ?>
-<?php }else{ ?>
 	<footer>
-<?php } ?>
+
 		<p class="s4"><a href="<?php bloginfo('url'); ?>" class="logo" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></p>
 		<div class="s8">
 			<ul class="topfoot s12">
