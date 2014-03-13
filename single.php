@@ -32,7 +32,7 @@
 					$the_content = ob_get_clean();
 
 					// Remove the first image from the content since we've put it as background
-					$the_content = preg_replace('(<p><img.*?></p>)', '', $the_content, 1);
+					$the_content = preg_replace('(<p>.*?<img.*?>.*?</p>)', '', $the_content, 1);
 
 					// Add CSS class to the first paragraph
 					$the_content = preg_replace('(<p>)', '<p class="first">', $the_content, 1);
