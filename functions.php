@@ -61,5 +61,36 @@ function jan14_catch_that_image() {
 }
 
 
+// /*
+
+// Coming soon...
+
+// https://codex.wordpress.org/Theme_Customization_API
+
+// - header back image
+// - header font color
+// - how many posts to show
+// - special category ID/slug
+// - resume template iframe url
+
+// */
+
+// function mytheme_customize_register( $wp_customize ) {
+// 	//All our sections, settings, and controls will be added here
+
+// 	$wp_customize->add_setting( 'header_textcolor' , array(
+// 		'default'     => '#000000',
+// 		'transport'   => 'refresh',
+// 	) );
+
+// 	$wp_customize->add_section( 'mytheme_new_section_name' , array(
+// 		'title'      => __( 'Visible Section Name', 'mytheme' ),
+// 		'priority'   => 30,
+// 	) );
+
+// }
+// add_action( 'customize_register', 'mytheme_customize_register' );
+
+
 
 
