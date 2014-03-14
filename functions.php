@@ -66,33 +66,57 @@ function jan14_catch_that_image() {
 
 // /*
 
-// Coming soon...
-
 // https://codex.wordpress.org/Theme_Customization_API
 
-// - header back image
-// - header font color
-// - how many posts to show
+// TODO:
 // - special category ID/slug
 // - resume template iframe url
 
 // */
 
-// function mytheme_customize_register( $wp_customize ) {
-// 	//All our sections, settings, and controls will be added here
+function jan14_customize_register( $wp_customize ) {
+	// All our sections, settings, and controls will be added here
 
-// 	$wp_customize->add_setting( 'header_textcolor' , array(
-// 		'default'     => '#000000',
-// 		'transport'   => 'refresh',
-// 	) );
+	$colors = array();
+	$colors[] = array(
+		'slug'=>'content_text_color', 
+		'default' => '#2d2e34',
+		'label' => __('Content Text Color', 'jan14')
+	);
+	$colors[] = array(
+		'slug'=>'link_color', 
+		'default' => '#3d8dcb',
+		'label' => __('Link Color', 'jan14')
+	);
+	$colors[] = array(
+		'slug'=>'section_background', 
+		'default' => '#9f937d',
+		'label' => __('Section background', 'jan14')
+	);
+	foreach( $colors as $color ) {
+		// SETTINGS
+		$wp_customize->add_setting(
+			$color['slug'], array(
+				'default' => $color['default'],
+				'type' => 'option', 
+				'capability' => 
+				'edit_theme_options'
+			)
+		);
+		// CONTROLS
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				$color['slug'], 
+				array('label' => $color['label'], 
+				'section' => 'colors',
+				'settings' => $color['slug'])
+			)
+		);
+	}
 
-// 	$wp_customize->add_section( 'mytheme_new_section_name' , array(
-// 		'title'      => __( 'Visible Section Name', 'mytheme' ),
-// 		'priority'   => 30,
-// 	) );
-
-// }
-// add_action( 'customize_register', 'mytheme_customize_register' );
+}
+add_action( 'customize_register', 'jan14_customize_register' );
 
 
 

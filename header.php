@@ -19,6 +19,20 @@ if (strpos(get_bloginfo('url'), 'localhost') !== false) {
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1"/>
 	<?php wp_head(); ?>
 
+
+	<?php
+		$content_text_color = get_option('content_text_color');
+		$link_color = get_option('link_color');
+		$section_background = get_option('section_background');
+	?>
+	<style>
+		body { color:  <?php echo $content_text_color; ?>; }
+		a { color: <?php echo $link_color; ?>; }
+			.button:hover {background: <?php echo $link_color; ?> !important; border-color: <?php echo $link_color; ?> !important;}
+		.brownback { background: <?php echo $section_background; ?>; }
+			section>.title {color: <?php echo $section_background; ?>; }
+	</style>
+
 	<?php $onlyone = false; if (have_posts()) : while (have_posts()) : the_post(); if (jan14_catch_that_image() AND $onlyone == false) : $onlyone = true; ?>
 		<style>
 			body,footer {background-image:url('<?php echo bloginfo('template_url'); ?>/thumb.php?src=<?php echo jan14_catch_that_image() ?>&w=960&zc=1&q=<?=JAN14_TIMTHUMB_QUALITY?>');}
