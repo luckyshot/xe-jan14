@@ -71,6 +71,9 @@ function jan14_catch_that_image() {
 // TODO:
 // - special category ID/slug
 // - resume template iframe url
+// - font-family
+// - border-radius on/off
+// - social network buttons
 
 // */
 
