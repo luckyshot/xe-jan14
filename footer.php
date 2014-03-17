@@ -15,7 +15,7 @@
 		Please don't remove this credit :)
 		I've worked hard on the theme and released it for free instead of making 
 		a few hundred bucks selling it. See this link as your way of saying 'Thanks!' 
-		*/ ?><a href="http://xaviesteve.com/"<?php if (!is_front_page()) { ?> rel="nofollow"<?php } ?>>Xavi</a></small></p>
+		*/ ?><a href="http://xaviesteve.com/" rel="nofollow">Xavi</a></small></p>
 
 		<ul class="footlinks right s6">
 			<?php wp_nav_menu(array('theme_location' => 'footer-bottom-right-links')); ?>
