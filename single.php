@@ -15,7 +15,7 @@
 				<div class="s2" style="padding-top:20px;">
 					<div style="float: left;"><a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-related="" data-url="<?php the_permalink(); ?>">Tweet</a></div>
 				</div>
-				<div class="s2" style="padding-top:16px;">
+				<div class="s2" style="padding-top:20px;">
 					<div id="fb-root"></div><div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
 				</div>
 				<div class="s2" style="padding-top:20px;">
