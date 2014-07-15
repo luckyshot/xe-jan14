@@ -14,7 +14,7 @@
 		<p class="footnote s6">&copy; <?php bloginfo('name'); ?> <?=date('Y');?> <small>Design by <?php /* 
 		Please don't remove this credit :)
 		I've worked hard on the theme and released it for free instead of making 
-		a few hundred bucks selling it. See this link as your way of saying 'Thanks!' 
+		a few hundred bucks selling it. See this link as your way of saying 'Thanks!'
 		*/ ?><a href="http://xaviesteve.com/" rel="nofollow">Xavi</a></small></p>
 
 		<ul class="footlinks right s6">
