@@ -130,7 +130,8 @@ a {color:@blue;}
 h1,h2,h3,h4,h5,h6 {}
 
 .right {text-align: right;}
-.center {text-align: center;}
+.center,
+.aligncenter {text-align: center;}
 .fleft {float: left;margin: 0 1em 1em 0;}
 .fright {float: right;margin: 0 0 1em 1em;}
 .hide {display: none;}
@@ -270,8 +271,9 @@ footer .search input:focus {border-bottom: 1px solid rgba(255,255,255,.33);}
 .post a:hover {text-decoration: underline;}
 .post a.button:hover {text-decoration: none;}
 .post small {font-size: @small;}
-.post li {display: list-item;list-style-type: disc;margin-left: 2em;}
-.post pre {overflow:auto;}
+.post li {display: list-item;list-style-type: disc;margin: 0 0 .5em 2em;}
+.post ol li {list-style-type: decimal;}
+.post pre {overflow-x: scroll;}
 .post em,
 .post i {font-style: italic;}
 .post .list-horizontal li {list-style-type: none;}
